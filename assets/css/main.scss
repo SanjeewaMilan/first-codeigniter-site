@@ -1,0 +1,263 @@
+
+$colors: ( 
+  primary: #22b929,
+  secondry: black,
+  bg-clr:#DC9C61,
+  footer-clr:#846A52,
+);
+
+@function color ($color-name){
+  @return map-get($colors, $color-name);
+}
+
+@font-face {
+  font-family: "Drowsy";
+  src: url(Drowsy.otf) format("truetype");
+}
+body{
+  font-family:sans-serif;
+}
+
+
+/*================ Mobile Menu==========================*/
+.mobile-menu-icon{
+  background-color:white;
+  height: 40px;
+  width: 40px;
+  border-radius: 40px;
+  background-image: url("img/mobile-menu.png");
+  background-repeat: no-repeat;
+  background-size: 45%;
+  background-position: center;
+  cursor:pointer;
+}
+
+
+
+.logo{
+  display: flex;
+  flex-wrap: wrap;
+  align-content:center; 
+  font-family: "drowsy";
+  
+  a {color:color(primary);}
+  @media screen and(max-width:1023px){
+    font-size: 1.5em;
+  }
+}
+
+.menu{
+  a {
+    color: color(secondry);
+    font-size: 16px;
+    font-weight: 700;
+  }
+}
+
+.mobile-menu{
+  position: absolute;
+  width: 100%;
+  background: white;
+    .menu{
+      width: 100%;
+      a {font-size:14px;}
+      .dropdown{
+        position: relative;
+      }
+    }
+}
+
+.desktop-menu{
+  padding: 20px 0px;
+
+  .logo{
+    font-size: 30px;
+  }
+  li:hover{
+    background: color(primary);
+    a:hover{color: white;}
+    a:active{color:white;}
+  }
+}
+
+
+.top-banner-wrapper{
+		.responsive-img{
+			
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            height: 300px;
+            width: 100%;	
+            @media screen and (max-width:640px){
+              background-size: 100% 100% ;
+              height: 100px;
+              
+            }
+    }
+    
+    .responsive-img{
+            height: auto;
+            width: 100%;	
+		}
+}
+/*================ product img ==========================*/
+
+.product-img{
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content:center;
+  //max-width: 300px;
+  margin: 5px auto;
+
+}
+
+.text-block{
+  position: absolute;
+  color:white;
+  background-color:rgba(10, 10, 10, 0.7);
+  bottom: 0px;
+  @media screen and (max-width:1023px){
+    width: 280px;
+  }
+  p{
+    margin:0;
+    padding:20px;
+  }
+}
+
+/*================ growing media ==========================*/
+.growing-media{
+  background-image: url("img/menu-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  padding: 5px;
+  @media screen and (max-width:540px){
+    margin: 5px 0 10px 0;
+  }
+}
+
+
+.growing-media-dropdown{
+  width: 100%;
+  border : 0;
+  margin: 5px 0 0 0;
+  padding: 0;
+
+}
+
+
+.growing-media-text {
+  a{color: white;}
+background:color(bg-clr);
+padding: 5px 20px;
+margin: 5px 0;}
+
+.product-details{
+  
+  margin-bottom: 20px;
+  @media screen and (max-width:1023px){
+    margin-bottom: 10px;
+  }
+
+  @media screen and (max-width:643px){
+    border:solid 1px rgb(221, 219, 217);
+    
+    border-radius: 10px;
+    //box-shadow: 1px 1px 2px  #aaaaaa;
+    padding:10px 5px;
+  }
+  .product-detailsimg{
+    
+    display: inline-block;
+    margin: 0 20px 0 30px;
+    @media screen and (max-width:543px){
+      margin: 0 0px;
+    }
+
+      @media screen and (max-width:1023px){
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      }
+
+  }
+  .product-description{
+    @media screen and (max-width:648px){
+      p{display:flex; justify-content: center;}
+    }
+  }
+}
+
+/*================ contact us ==========================*/
+.contact-info-section{
+  background: color(bg-clr);
+  border-radius: 10px;
+  padding: 20px 20px;
+  //height: 100%;
+  
+}
+
+.form-group{
+  padding: 0px 5px;
+}
+
+/*================ about us ==========================*/
+.about-box{
+  border: solid 2px gray;
+  border-radius: 10px;
+  margin: 0 1vw 20px 1vw;
+}
+
+.our-products-are{
+  width: 100%;
+  padding: 0 20vw;
+}
+/*================ Footer ==========================*/
+footer{
+  background: color(footer-clr);
+  .footer{
+    padding:30px 0px;
+    color: white;
+
+    .footer-section-1{
+      h2{margin:0px;}
+      p{line-height: 10px;}
+      margin-bottom: 10px;
+    }
+
+    .footer-section-2{
+      font-size: 14px;
+      a{color :white}
+    }
+
+    .footer-section-3{
+      font-size: 14px;
+      a{color :white}
+    }
+
+    .footer-section-4{
+      margin-top: 10px;
+      a{
+        color: white; 
+        background: color(secondry);
+        width: 40px;
+        height: 40px;
+      }
+      .fa{
+        text-align: center;
+        text-decoration: none;
+        padding: 10px;
+        border-radius: 50%;
+      }
+      .fa:hover{opacity: 0.7;}
+    }
+  }
+}
+
+.center{
+   
+  justify-content:center;
+  width:100%;
+}
